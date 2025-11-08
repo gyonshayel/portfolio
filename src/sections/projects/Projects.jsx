@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -8,12 +8,15 @@ import {
   DialogTrigger,
 } from "../../components/ui/dialog";
 import { projects } from "../../data/projects";
+import { HorizontalScroll } from "../../components/HorizontalScroll";
 import { Technologies } from "./Technologies";
 import "./work.css";
 
 export function Projects() {
+  const containerRef = useRef();
+
   return (
-    <section id="work" className="work container section">
+    <section id="work" className="work container">
       <h2 className="work__title">Projects</h2>
       <div className="work__container">
         {projects.map((project, index) => {
@@ -57,19 +60,24 @@ export function Projects() {
                       </DialogDescription>
                       <Technologies technologies={project.technologies} />
                     </DialogHeader>
-                    <div className="w-full flex flex-col gap-4 text-sm overflow-y-scroll">
-                      <div className="flex gap-4 overflow-x-scroll sm:min-h-60 md:min-h-78">
-                        {project.images.map((image, index) => {
-                          return (
-                            <img
-                              key={image}
-                              className="h-45 sm:h-55 md:h-74 w-auto object-contain rounded-lg shrink-0"
-                              src={image}
-                              alt={`${project.name} - ${index + 1}`}
-                            />
-                          );
-                        })}
-                      </div>
+                    <div className="w-full flex flex-col gap-4 text-sm overflow-y-scroll scrollbar-hide">
+                      <HorizontalScroll scrollRef={containerRef}>
+                        <div
+                          ref={containerRef}
+                          className="flex gap-4 overflow-x-scroll sm:min-h-60 md:min-h-78 scrollbar-hide"
+                        >
+                          {project.images.map((image, index) => {
+                            return (
+                              <img
+                                key={image}
+                                className="h-45 sm:h-55 md:h-74 w-auto object-contain rounded-lg shrink-0"
+                                src={image}
+                                alt={`${project.name} - ${index + 1}`}
+                              />
+                            );
+                          })}
+                        </div>
+                      </HorizontalScroll>
                       <div>{project.description}</div>
                       <div>
                         <h3 className="text-base text-(--color-heading)">
