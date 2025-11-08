@@ -42,9 +42,9 @@ export const projects = [
     thumbnail: "/projects/portfolio/thumbnail.png",
     images: [
       "/projects/portfolio/image-1.png",
-      "/projects/portfolio/image-1.png",
-      "/projects/portfolio/image-1.png",
-      "/projects/portfolio/image-1.png",
+      "/projects/portfolio/image-2.png",
+      "/projects/portfolio/image-3.png",
+      "/projects/portfolio/image-4.png",
     ],
     technologies: ["React", "Tailwind CSS", "CSS"],
     github: "https://github.com/gyonshayel/Portfolio-website",

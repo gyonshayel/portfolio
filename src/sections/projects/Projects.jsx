@@ -1,5 +1,14 @@
 import { Fragment } from "react";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "../../components/ui/dialog";
 import { projects } from "../../data/projects";
+import { Technologies } from "./Technologies";
 import "./work.css";
 
 export function Projects() {
@@ -7,21 +16,98 @@ export function Projects() {
     <section id="work" className="work container section">
       <h2 className="work__title">Projects</h2>
       <div className="work__container">
-        {projects.map((project, index) => (
-          <Fragment key={project.website}>
-            <h3 className="work__project-title">{project.name}</h3>
-            <div className={`work__img-wrapper work__image${index + 1}`}>
-              <img loading="lazy" src={project.thumbnail} alt={project.name} />
-            </div>
-            <div className={`work__project work__content${index + 1}`}>
-              <h3 className="work__project-subtitle">{project.name}</h3>
-              <p className="work__project-description">{project.description}</p>
-              <a className="btn work__project-btn" href="#">
-                Learn More
-              </a>
-            </div>
-          </Fragment>
-        ))}
+        {projects.map((project, index) => {
+          return (
+            <Fragment key={project.website}>
+              <h3 className="work__project-title">{project.name}</h3>
+              <div className={`work__img-wrapper work__image${index + 1}`}>
+                <img
+                  loading="lazy"
+                  src={project.thumbnail}
+                  alt={project.name}
+                />
+              </div>
+              <div className={`work__project work__content${index + 1}`}>
+                <h3 className="work__project-subtitle">{project.name}</h3>
+                <p className="work__project-description">
+                  {project.description}
+                </p>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="btn work__project-btn" href="#">
+                      Learn More
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent
+                    className="flex flex-col gap-6 
+                  min-w-full min-h-full 
+                  min-[475px]:min-w-[475px] min-[475px]:max-w-[475px] min-[475px]:min-h-[475px] min-[475px]:max-h-[95vh]
+                  sm:min-h-[90vh] sm:max-h-[90vh]
+                  md:min-w-[85vw] md:max-w-[85vw] md:min-h-[85vh] md:max-h-[85vh]
+                  lg:min-w-[60vw] lg:max-w-[60vw]
+                  2xl:min-h-[73vh] 2xl:max-h-[73vh]
+                  p-4 min-[475px]:p-6 bg-(--color-top)/70 backdrop-blur-lg text-(--color-text) border-none rounded-lg"
+                  >
+                    <DialogHeader>
+                      <DialogTitle className="text-left text-3xl text-(--color-heading)">
+                        {project.name}
+                      </DialogTitle>
+                      <DialogDescription className="sr-only">
+                        Project Details
+                      </DialogDescription>
+                      <Technologies technologies={project.technologies} />
+                    </DialogHeader>
+                    <div className="w-full flex flex-col gap-4 text-sm overflow-y-scroll">
+                      <div className="flex gap-4 overflow-x-scroll sm:min-h-60 md:min-h-78">
+                        {project.images.map((image, index) => {
+                          return (
+                            <img
+                              key={image}
+                              className="h-45 sm:h-55 md:h-74 w-auto object-contain rounded-lg shrink-0"
+                              src={image}
+                              alt={`${project.name} - ${index + 1}`}
+                            />
+                          );
+                        })}
+                      </div>
+                      <div>{project.description}</div>
+                      <div>
+                        <h3 className="text-base text-(--color-heading)">
+                          Features
+                        </h3>
+                        <ul className="list-disc">
+                          {project.features.map((feature) => {
+                            return (
+                              <li className="ml-4" key={feature}>
+                                {feature}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                      <div>
+                        <a
+                          className="block text-blue-500 underline text-base"
+                          href={project.github}
+                          target="_blank"
+                        >
+                          Github Repository
+                        </a>
+                        <a
+                          className="block text-blue-500 underline text-base"
+                          href={project.website}
+                          target="_blank"
+                        >
+                          Live website
+                        </a>
+                      </div>
+                    </div>
+                  </DialogContent>
+                </Dialog>
+              </div>
+            </Fragment>
+          );
+        })}
       </div>
     </section>
   );
