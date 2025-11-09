@@ -1,6 +1,6 @@
-export function ProjectImages({ images, name, scrollRef }) {
-  const handleFullscreen = (e) => {
-    const img = e.target;
+export function FullScreenImages({ images, name, scrollRef }) {
+  const handleFullscreen = (event) => {
+    const img = event.target;
     if (img.requestFullscreen) {
       img.requestFullscreen();
     } else if (img.webkitRequestFullscreen) {

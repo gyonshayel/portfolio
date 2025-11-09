@@ -10,6 +10,7 @@ import {
 import { projects } from "../../data/projects";
 import { HorizontalScroll } from "../../components/HorizontalScroll";
 import { Technologies } from "./Technologies";
+import { FullScreenImages } from "./FullScreen";
 import "./work.css";
 
 export function Projects() {
@@ -48,7 +49,7 @@ export function Projects() {
                   sm:min-h-[90vh] sm:max-h-[90vh]
                   md:min-w-[85vw] md:max-w-[85vw] md:min-h-[85vh] md:max-h-[85vh]
                   lg:min-w-[60vw] lg:max-w-[60vw]
-                  2xl:min-h-[73vh] 2xl:max-h-[73vh]
+                  2xl:min-h-[80vh] 2xl:max-h-[80vh]
                   p-4 min-[475px]:p-6 bg-(--color-top)/70 backdrop-blur-lg text-(--color-text) border-none rounded-lg"
                   >
                     <DialogHeader>
@@ -60,23 +61,13 @@ export function Projects() {
                       </DialogDescription>
                       <Technologies technologies={project.technologies} />
                     </DialogHeader>
-                    <div className="w-full flex flex-col gap-4 text-sm overflow-y-scroll scrollbar-hide">
+                    <div className="w-full flex flex-col gap-4 text-sm overflow-y-scroll overflow-x-hidden">
                       <HorizontalScroll scrollRef={containerRef}>
-                        <div
-                          ref={containerRef}
-                          className="flex gap-4 overflow-x-scroll sm:min-h-60 md:min-h-78 scrollbar-hide"
-                        >
-                          {project.images.map((image, index) => {
-                            return (
-                              <img
-                                key={image}
-                                className="h-45 sm:h-55 md:h-74 w-auto object-contain rounded-lg shrink-0"
-                                src={image}
-                                alt={`${project.name} - ${index + 1}`}
-                              />
-                            );
-                          })}
-                        </div>
+                        <FullScreenImages
+                          images={project.images}
+                          name={project.name}
+                          scrollRef={containerRef}
+                        />
                       </HorizontalScroll>
                       <div>{project.description}</div>
                       <div>

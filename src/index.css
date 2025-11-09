@@ -1,6 +1,6 @@
-@import "tailwindcss";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 @import "tw-animate-css";
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -25,8 +25,8 @@
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-border: var(--border);
-  --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-input: var(--input);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -188,6 +188,7 @@
     cursor: pointer;
     padding: 0;
     border: none;
+    outline: none;
     background: none;
     color: inherit;
   }
@@ -279,13 +280,4 @@
         0px 6px 6px oklch(0.868 0.187 121 / 0.1);
     }
   }
-}
-
-@layer base {
-  /* * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  } */
 }
