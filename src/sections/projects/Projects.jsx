@@ -44,13 +44,13 @@ export function Projects() {
                   </DialogTrigger>
                   <DialogContent
                     className="flex flex-col gap-6 
-                  min-w-full min-h-full 
-                  min-[475px]:min-w-[475px] min-[475px]:max-w-[475px] min-[475px]:min-h-[475px] min-[475px]:max-h-[95vh]
-                  sm:min-h-[90vh] sm:max-h-[90vh]
-                  md:min-w-[85vw] md:max-w-[85vw] md:min-h-[85vh] md:max-h-[85vh]
-                  lg:min-w-[60vw] lg:max-w-[60vw]
-                  2xl:min-h-[80vh] 2xl:max-h-[80vh]
-                  p-4 min-[475px]:p-6 bg-(--color-top)/70 backdrop-blur-lg text-(--color-text) border-none rounded-lg"
+                    min-w-full min-h-full 
+                    min-[475px]:min-w-[475px] min-[475px]:max-w-[475px] min-[475px]:min-h-[475px] min-[475px]:max-h-[95vh]
+                    sm:min-h-[90vh] sm:max-h-[90vh]
+                    md:min-w-[85vw] md:max-w-[85vw] md:min-h-[85vh] md:max-h-[85vh]
+                    lg:min-w-[60vw] lg:max-w-[60vw]
+                    2xl:min-h-[80vh] 2xl:max-h-[80vh]
+                    p-4 min-[475px]:p-6 bg-(--color-top)/70 backdrop-blur-lg text-(--color-text) border-none rounded-lg"
                   >
                     <DialogHeader>
                       <DialogTitle className="text-left text-3xl text-(--color-heading)">
@@ -61,7 +61,14 @@ export function Projects() {
                       </DialogDescription>
                       <Technologies technologies={project.technologies} />
                     </DialogHeader>
-                    <div className="w-full flex flex-col gap-4 text-sm overflow-y-scroll overflow-x-hidden">
+                    <div
+                      className="w-full flex flex-col gap-4 text-sm overflow-y-auto overflow-x-hidden
+                      [&::-webkit-scrollbar]:w-1
+                      [&::-webkit-scrollbar-track]:rounded-full
+                      [&::-webkit-scrollbar-track]:bg-(--color-bottom)
+                      [&::-webkit-scrollbar-thumb]:rounded-full
+                      [&::-webkit-scrollbar-thumb]:bg-(--color-text)/20"
+                    >
                       <HorizontalScroll scrollRef={containerRef}>
                         <FullScreenImages
                           images={project.images}
@@ -84,16 +91,16 @@ export function Projects() {
                           })}
                         </ul>
                       </div>
-                      <div>
+                      <div className="flex flex-col">
                         <a
-                          className="block text-blue-500 underline text-base"
+                          className="w-fit text-blue-500 underline text-base"
                           href={project.github}
                           target="_blank"
                         >
                           Github Repository
                         </a>
                         <a
-                          className="block text-blue-500 underline text-base"
+                          className="w-fit text-blue-500 underline text-base"
                           href={project.website}
                           target="_blank"
                         >
