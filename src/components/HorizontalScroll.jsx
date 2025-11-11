@@ -19,13 +19,13 @@ export function HorizontalScroll({ children, scrollRef }) {
         onClick={() => scroll("left")}
         variant="ghost"
         size="icon"
-        className="absolute -left-[15px] top-1/2 -translate-y-1/2 z-50 rounded-full"
+        className="absolute -left-3.5 top-1/2 -translate-y-1/2 rounded-full"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-4 sm:size-5"
+          className="size-4 sm:size-5 bg-(--color-bottom)/50 rounded-md"
         >
           <path
             fillRule="evenodd"
@@ -49,7 +49,7 @@ export function HorizontalScroll({ children, scrollRef }) {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-4 sm:size-5"
+          className="size-4 sm:size-5 bg-(--color-bottom)/50 rounded-md"
         >
           <path
             fillRule="evenodd"

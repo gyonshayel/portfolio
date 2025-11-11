@@ -1,4 +1,4 @@
-import { Fragment, useRef } from "react";
+import { useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -17,21 +17,24 @@ export function Projects() {
   const containerRef = useRef();
 
   return (
-    <section id="work" className="work container">
+    <section id="work" className="container section">
       <h2 className="work__title">Projects</h2>
       <div className="work__container">
         {projects.map((project, index) => {
           return (
-            <Fragment key={project.website}>
-              <h3 className="work__project-title">{project.name}</h3>
-              <div className={`work__img-wrapper work__image${index + 1}`}>
+            <div
+              className={`work__project work__project-${index + 1}`}
+              key={project.website}
+            >
+              <div className="work__img-wrapper">
                 <img
+                  className="work__img"
                   loading="lazy"
                   src={project.thumbnail}
                   alt={project.name}
                 />
               </div>
-              <div className={`work__project work__content${index + 1}`}>
+              <div className="work__project-details">
                 <h3 className="work__project-subtitle">{project.name}</h3>
                 <p className="work__project-description">
                   {project.description}
@@ -43,8 +46,8 @@ export function Projects() {
                     </button>
                   </DialogTrigger>
                   <DialogContent
-                    className="flex flex-col gap-6 
-                    min-w-full min-h-full 
+                    className="flex flex-col gap-6
+                    min-w-full min-h-full
                     min-[475px]:min-w-[475px] min-[475px]:max-w-[475px] min-[475px]:min-h-[475px] min-[475px]:max-h-[95vh]
                     sm:min-h-[90vh] sm:max-h-[90vh]
                     md:min-w-[85vw] md:max-w-[85vw] md:min-h-[85vh] md:max-h-[85vh]
@@ -62,7 +65,7 @@ export function Projects() {
                       <Technologies technologies={project.technologies} />
                     </DialogHeader>
                     <div
-                      className="w-full flex flex-col gap-4 text-sm overflow-y-auto overflow-x-hidden
+                      className="w-full flex flex-col gap-4 text-sm overflow-y-auto scroll-smooth overflow-x-hidden
                       [&::-webkit-scrollbar]:w-1
                       [&::-webkit-scrollbar-track]:rounded-full
                       [&::-webkit-scrollbar-track]:bg-(--color-bottom)
@@ -111,7 +114,7 @@ export function Projects() {
                   </DialogContent>
                 </Dialog>
               </div>
-            </Fragment>
+            </div>
           );
         })}
       </div>

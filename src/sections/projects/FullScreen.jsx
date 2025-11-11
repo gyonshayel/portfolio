@@ -11,7 +11,7 @@ export function FullScreenImages({ images, name, scrollRef }) {
   return (
     <div
       ref={scrollRef}
-      className="flex gap-4 overflow-x-scroll sm:min-h-60 md:min-h-78 scrollbar-hide"
+      className="flex gap-4 overflow-x-auto scroll-smooth sm:min-h-60 md:min-h-78 scrollbar-hide"
     >
       {images.map((image, index) => {
         return (

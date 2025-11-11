@@ -153,6 +153,20 @@
     --color-general: hsl(0, 0%, 0%);
     --color-nav-bg: rgba(22, 22, 23, 0.8);
     --color-nav-item: rgba(255, 255, 255, 0.8);
+    --color-border: hsl(0, 0%, 95%);
+    --color-border-highlight: hsl(0, 0%, 100%);
+    --gradient: linear-gradient(
+      0deg,
+      var(--color-middle) 95%,
+      var(--color-top)
+    );
+    --gradient-hover: linear-gradient(
+      0deg,
+      var(--color-middle),
+      var(--color-top)
+    );
+    --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07),
+      0px 4px 4px hsla(0, 0%, 0%, 0.15);
   }
 
   * {
@@ -204,6 +218,18 @@
       --color-general: hsl(0, 0%, 100%);
       --color-nav-bg: rgba(250, 250, 252, 0.8);
       --color-nav-item: rgba(0, 0, 0, 0.8);
+      --color-border: hsl(0, 0%, 30%);
+      --color-border-highlight: hsl(0, 0%, 60%);
+      --gradient: linear-gradient(
+        0deg,
+        var(--color-middle) 95%,
+        var(--color-top)
+      );
+      --gradient-hover: linear-gradient(
+        0deg,
+        var(--color-middle),
+        var(--color-top)
+      );
 
       /* font colors */
       --color-heading: hsl(0, 0%, 95%);
