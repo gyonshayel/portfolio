@@ -22,14 +22,6 @@ export function About() {
           development.
         </p>
       </div>
-      <div className="about__img-wrapper">
-        <img
-          loading="lazy"
-          className="about__img"
-          src="/about.JPG"
-          alt="Portfolio picture."
-        />
-      </div>
       <div className="about__technologies">
         <h3 className="about__technologies-title">Technologies</h3>
         <ul className="about__technologies-content">
