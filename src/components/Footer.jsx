@@ -87,7 +87,7 @@ export function Footer() {
           <ThemeSwitcher
             value={theme}
             onChange={setTheme}
-            className="scale-100 text-(--color-text)"
+            className="scale-100"
           />
         </div>
         <p className="footer__note">
@@ -96,13 +96,4 @@ export function Footer() {
       </div>
     </footer>
   );
-}
-
-{
-  /* <img
-      loading="lazy"
-      src="/LI-In-Bug.png"
-      alt="LinkedIn profile"
-      className="footer__connect-img"
-      /> */
 }

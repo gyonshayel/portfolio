@@ -45,17 +45,36 @@ export const ThemeSwitcher = ({
 
   useEffect(() => {
     if (!mounted) return;
-
     const root = document.documentElement;
 
     if (theme === "system") {
-      root.removeAttribute("data-theme");
+      const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      if (isDark) {
+        root.classList.add("dark");
+      } else {
+        root.classList.remove("dark");
+      }
       localStorage.setItem("theme", "system");
-    } else {
-      root.setAttribute("data-theme", theme);
-      localStorage.setItem("theme", theme);
+    } else if (theme === "dark") {
+      root.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else if (theme === "light") {
+      root.classList.remove("dark");
+      localStorage.setItem("theme", "light");
     }
   }, [theme, mounted]);
+
+  useEffect(() => {
+    if (theme !== "system") return;
+
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const handler = (e) => {
+      document.documentElement.classList.toggle("dark", e.matches);
+    };
+
+    mediaQuery.addEventListener("change", handler);
+    return () => mediaQuery.removeEventListener("change", handler);
+  }, [theme]);
 
   // Prevent hydration mismatch
   useEffect(() => {
@@ -71,7 +90,7 @@ export const ThemeSwitcher = ({
   return (
     <div
       className={cn(
-        "relative isolate flex h-8 rounded-full bg-background p-1 ring-1 ring-border",
+        "relative isolate flex h-8 rounded-full bg-(--color-bottom) p-1 ring-1 ring-(--color-border)",
         className
       )}
     >
@@ -81,22 +100,22 @@ export const ThemeSwitcher = ({
         return (
           <button
             aria-label={label}
-            className="relative h-6 w-6 rounded-full"
+            className={`relative h-6 w-6 rounded-full`}
             key={key}
             onClick={() => handleThemeClick(key)}
             type="button"
           >
             {isActive && (
               <motion.div
-                className="absolute inset-0 rounded-full bg-secondary"
+                className="absolute inset-0 rounded-full bg-(--color-primary)"
                 layoutId="activeTheme"
                 transition={{ type: "spring", duration: 0.5 }}
               />
             )}
             <Icon
               className={cn(
-                "relative z-10 m-auto h-4 w-4",
-                isActive ? "text-foreground" : "text-muted-foreground"
+                "relative z-10 m-auto h-4 w-4 transition-all duration-150",
+                isActive ? "text-black" : "text-(--color-text)"
               )}
             />
           </button>

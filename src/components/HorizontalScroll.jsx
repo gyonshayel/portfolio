@@ -19,7 +19,7 @@ export function HorizontalScroll({ children, scrollRef }) {
         onClick={() => scroll("left")}
         variant="ghost"
         size="icon"
-        className="absolute -left-3.5 top-1/2 -translate-y-1/2 rounded-full"
+        className="absolute -left-1.5 top-1/2 -translate-y-1/2 rounded-full ring-0 border-none opacity-0 hover:opacity-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -43,7 +43,7 @@ export function HorizontalScroll({ children, scrollRef }) {
         onClick={() => scroll("right")}
         variant="ghost"
         size="icon"
-        className="flex justify-end items-center absolute -right-[5px] top-1/2 -translate-y-1/2 z-50 rounded-full"
+        className="flex justify-end items-center absolute right-1 top-1/2 -translate-y-1/2 z-50 rounded-full ring-0 border-none opacity-0 hover:opacity-100"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -18,7 +18,7 @@ export function Projects() {
   const containerRef = useRef();
 
   return (
-    <section id="work" className="container section">
+    <section id="work" className="md:container section">
       <h2 className="work__title">Projects</h2>
       <div className="work__container scrollbar-hide dragscroll">
         {projects.map((project, index) => {
