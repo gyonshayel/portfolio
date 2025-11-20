@@ -4,13 +4,15 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  gap: 1rem;
+  /* padding-bottom: 4.5rem; */
 }
 
 .contact__title {
   font-size: 1.75rem;
   font-family: var(--font-family-heading);
+  font-weight: 500;
   color: var(--color-heading);
+  margin-bottom: 0.75em;
 
   /* Blur */
   /* background-color: transparent;
@@ -30,6 +32,7 @@
   font-size: var(--size-base);
   color: var(--color-text);
   max-width: 60ch;
+  margin-bottom: 1em;
 }
 
 .contact__btn {
@@ -39,10 +42,6 @@
 
 /* xs */
 @media (min-width: 475px) {
-  .contact {
-    gap: 1.5rem;
-  }
-
   .contact__title {
     font-size: var(--size-3xl);
   }
@@ -71,10 +70,6 @@
 
 /* xl */
 @media (min-width: 1280px) {
-  .contact {
-    gap: 2rem;
-  }
-
   .contact__title {
     font-size: var(--size-5xl);
   }

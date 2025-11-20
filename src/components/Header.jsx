@@ -36,7 +36,16 @@ export function Header() {
   return (
     <>
       <header>
-        <nav className="header__content md:container">
+        <nav className="header__content">
+          {/* md:container */}
+          <div className="header-logo">
+            <a
+              className={`header-logo__link ${isOpen ? "logo-hidden" : ""}`}
+              href="https://portfolio-website-ten-blond-63.vercel.app/"
+            >
+              gyonshayel
+            </a>
+          </div>
           <ul className="header__menu">
             <li>
               <a className="header__link" href="#about">
@@ -54,14 +63,6 @@ export function Header() {
               </a>
             </li>
           </ul>
-          <div className="header-logo">
-            <a
-              className={`header-logo__link ${isOpen ? "hidden" : ""}`}
-              href="https://portfolio-website-ten-blond-63.vercel.app/"
-            >
-              Shayel Joshua
-            </a>
-          </div>
           <button
             onClick={toggleMobileNav}
             aria-label="mobile navigation button"

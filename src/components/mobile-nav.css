@@ -13,6 +13,7 @@
   transform: translateY(-100%);
   pointer-events: none;
   background-color: var(--color-nav-bg);
+  backdrop-filter: blur(40px);
   transition: color 0.5s ease forwards;
 }
 
@@ -30,7 +31,7 @@
 .mobile-nav__menu {
   list-style: none;
   padding-top: 4rem;
-  padding-left: 2rem;
+  padding-left: 1.5rem;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -41,8 +42,9 @@
 
 .mobile-nav__link {
   text-decoration: none;
-  font-size: 1.75rem;
-  font-weight: 500;
+  font-family: var(--font-family-mono);
+  font-size: 1.5rem;
+  font-weight: 600;
   color: var(--color-nav-item);
   text-transform: uppercase;
 }
@@ -50,23 +52,35 @@
 @keyframes slideDown {
   from {
     transform: translateY(-100%);
-    background-color: var(--color-nav-bg);
-    /* display: flex; */
+    /* background-color: var(--color-nav-bg); */
   }
   to {
     transform: translateY(0%);
-    background-color: var(--color-general);
+    /* background-color: var(--color-general); */
   }
 }
 
 @keyframes slideUp {
   from {
     transform: translateY(0%);
-    background-color: var(--color-general);
+    /* background-color: var(--color-general); */
   }
   to {
     transform: translateY(-100%);
-    background-color: var(--color-nav-bg);
-    /* display: none; */
+    /* background-color: var(--color-nav-bg); */
+  }
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .mobile-nav__link {
+    font-size: 1.75rem;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .mobile-nav__link {
+    font-size: 2rem;
   }
 }

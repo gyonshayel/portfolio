@@ -7,7 +7,6 @@ export function MobileNav({ mounted, isOpen, toggleMobileNav }) {
         !mounted ? "" : isOpen ? "active" : "not-active"
       }`}
     >
-      {/* transition in not active is happening on reload */}
       <nav>
         <ul className="mobile-nav__menu">
           <li>

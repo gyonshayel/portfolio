@@ -4,12 +4,12 @@ export function About() {
   return (
     <section
       id="about"
-      className="flex flex-col gap-12 lg:gap-16 container section"
+      className="flex flex-col gap-4 lg:gap-6 p-6 bg-(--color-bottom)/60 backdrop-blur-md rounded-3xl container section border border-red-500"
     >
-      <div className="flex flex-col gap-4 min-[475px]:gap-6 xl:gap-8 max-w-[80ch] ml-0 lg:m-auto lg:text-center">
+      <div className="flex flex-col max-w-[80ch] ml-0 lg:m-auto lg:text-center">
         <h2 className="about__title">About Me</h2>
         <p className="about__description">
-          Hi, I am Shayel Joshua, a software engineering student currently
+          Hi, I am Gyon Shayel Joshua, a software engineering student currently
           completing my Higher National Diploma in Software Engineering. While
           my academic studies mainly focus on building a strong foundation in
           programming, databases, and software development principles, I do self
@@ -25,7 +25,7 @@ export function About() {
           development.
         </p>
       </div>
-      <div className="w-full h-full max-w-[80ch] xl:max-w-full ml-0 lg:m-auto bg-(--color-middle) rounded-lg">
+      <div className="w-full h-full max-w-[80ch] xl:max-w-full ml-0 lg:m-auto bg-[radial-gradient(circle_at_center,var(--color-top),var(--color-middle),var(--color-bottom))] rounded-3xl">
         <ul className="about__technologies-content">
           <h3 className="about__technologies-title ">Technologies</h3>
           <li className="text-[#E34F26] hover:bg-[#E34F26] hover:text-(--color-nav-bg)">

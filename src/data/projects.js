@@ -2,7 +2,7 @@ export const projects = [
   {
     // Project 1
     name: "E-commerce Project",
-    description: `A fully functional responsive E-commerce web application based on Amazon, built with React and styled using Tailwind CSS and CSS. Features a homepage with product listings from DummyJSON API, a checkout page with access to the cart, an orders page and a tracking page that simulates order status updates.`,
+    description: `A fully functional responsive E-commerce web application based on Amazon, built with React and styled using Tailwind CSS and CSS. Features a homepage with product listings from <a href="https://dummyjson.com/" target="_blank">DummyJSON API</a>, a checkout page with access to the cart, an orders page and a tracking page that simulates order status updates.`,
     features: [
       "Ability to search and browse products.",
       "Pagination for smooth navigation between products pages.",
@@ -83,8 +83,7 @@ export const projects = [
   {
     // Project 4
     name: "Movie App",
-    description:
-      "A fully responsive, modern React web app that allows users to browse, search and explore movies. Provides detailed movie information and let users favorite movies or save them to watch later. This app integrates real world data through TMDB API.",
+    description: `A fully responsive, modern React web app that allows users to browse, search and explore movies. Provides detailed movie information and let users favorite movies or save them to watch later. This app integrates real world data through <a href="https://www.themoviedb.org/" target="_blank">TMDB API</a>.`,
     features: [
       "Browse Top Picks, Popular, Now Playing and Upcoming movies with dynamic content from the TMDB API",
       "Real time search with suggestions and view movie data in a structured, responsive layout.",
@@ -113,8 +112,7 @@ export const projects = [
   {
     // Project 5
     name: "Weather App",
-    description:
-      "A responsive weather application that provides real-time weather data and forecasts using WeatherAPI. Automatically detects the user's location (with given permission) and displays local weather data. Users can search for locations and toggle between different temperature units.",
+    description: `A responsive weather application that provides real-time weather data and forecasts using <a href="https://www.weatherapi.com/" target="_blank">WeatherAPI</a>. Automatically detects the user's location (with given permission) and displays local weather data. Users can search for locations and toggle between different temperature units.`,
     features: [
       "Fetches real time weather data from WeatherAPI.",
       "Detects location via Geolocation API.",

@@ -18,7 +18,10 @@ export function Projects() {
   const containerRef = useRef();
 
   return (
-    <section id="work" className="md:container section">
+    <section
+      id="work"
+      className="p-6 bg-(--color-bottom)/60 backdrop-blur-md rounded-3xl md:container section border border-red-500"
+    >
       <h2 className="work__title">Projects</h2>
       <div className="work__container scrollbar-hide dragscroll">
         {projects.map((project, index) => {
@@ -37,13 +40,14 @@ export function Projects() {
               </div>
               <div className="work__project-details">
                 <h3 className="work__project-subtitle">{project.name}</h3>
-                <p className="work__project-description">
-                  {project.description}
-                </p>
+                <p
+                  className="work__project-description"
+                  dangerouslySetInnerHTML={{ __html: project.description }}
+                ></p>
                 <div className="work__project-dialog">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <button className="btn work__project-btn">
+                      <button className="work__project-btn">
                         More Details
                       </button>
                     </DialogTrigger>
@@ -81,7 +85,11 @@ export function Projects() {
                             scrollRef={containerRef}
                           />
                         </HorizontalScroll>
-                        <div>{project.description}</div>
+                        <p
+                          dangerouslySetInnerHTML={{
+                            __html: project.description,
+                          }}
+                        ></p>
                         <div>
                           <h3 className="text-base text-(--color-heading)">
                             Features

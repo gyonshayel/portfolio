@@ -7,8 +7,9 @@
 .work__title {
   font-size: 1.75rem;
   font-family: var(--font-family-heading);
+  font-weight: 500;
   color: var(--color-heading);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75em;
 
   padding-left: 24px;
 }
@@ -39,8 +40,9 @@
     var(--color-middle)
   );
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: 1.5rem;
   transition: background-color ease 0.3s;
+  overflow: hidden;
 }
 
 .work__img-wrapper {
@@ -65,8 +67,6 @@
   object-fit: cover;
   height: 100%;
   border-bottom: 0.25px solid var(--color-top);
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
 .work__project-details {
@@ -79,11 +79,12 @@
 .work__project-subtitle {
   font-size: var(--size-base);
   font-family: var(--font-family-heading);
+  font-weight: 400;
   color: var(--color-heading);
+  margin-bottom: 0.5em;
 }
 
 .work__project-description {
-  padding-top: 0.5em;
   font-size: var(--size-sm);
   color: var(--color-text);
 }
@@ -93,20 +94,23 @@
 }
 
 .work__project-btn {
-  width: 100%;
-  font-size: var(--size-base);
+  display: inline-block;
   text-transform: uppercase;
-}
-
-.work__project-btn:hover {
-  color: var(--color-heading);
+  font-size: var(--size-base);
+  font-family: var(--font-family-mono);
+  font-weight: 600;
+  padding: 0.25em 0.5em;
+  border-radius: 50px;
+  background-color: var(--color-general);
+  color: var(--color-nav-item);
+  filter: brightness(1.1);
 }
 
 /* xs */
 @media (min-width: 475px) {
   .work__title {
     font-size: var(--size-3xl);
-    margin: 1.5rem 0;
+    /* margin: 1.5rem 0; */
 
     padding-left: calc((100vw - 435px) / 2);
     padding-right: calc((100vw - 435px) / 2);
@@ -183,16 +187,18 @@
     text-align: right;
     background-image: linear-gradient(
       to right,
-      var(--color-top),
-      var(--color-middle)
+      var(--color-top) 50%,
+      var(--color-middle),
+      var(--color-bottom)
     );
   }
   .work__project-2 {
     flex-direction: row-reverse;
     background-image: linear-gradient(
       to left,
-      var(--color-top),
-      var(--color-middle)
+      var(--color-top) 50%,
+      var(--color-middle),
+      var(--color-bottom)
     );
   }
   .work__project-3 {
@@ -200,16 +206,18 @@
     text-align: right;
     background-image: linear-gradient(
       to right,
-      var(--color-top),
-      var(--color-middle)
+      var(--color-top) 50%,
+      var(--color-middle),
+      var(--color-bottom)
     );
   }
   .work__project-4 {
     flex-direction: row-reverse;
     background-image: linear-gradient(
       to left,
-      var(--color-top),
-      var(--color-middle)
+      var(--color-top) 50%,
+      var(--color-middle),
+      var(--color-bottom)
     );
   }
   .work__project-5 {
@@ -217,30 +225,10 @@
     text-align: right;
     background-image: linear-gradient(
       to right,
-      var(--color-top),
-      var(--color-middle)
+      var(--color-top) 50%,
+      var(--color-middle),
+      var(--color-bottom)
     );
-  }
-
-  .work__img-1 {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 8px;
-  }
-  .work__img-2 {
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 8px;
-  }
-  .work__img-3 {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 8px;
-  }
-  .work__img-4 {
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 8px;
-  }
-  .work__img-5 {
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 8px;
   }
 
   .work__img-wrapper::after {
@@ -257,6 +245,7 @@
 
   .work__project-description {
     font-size: var(--size-sm);
+    padding-bottom: 2rem;
   }
 
   .work__project-btn {
@@ -268,7 +257,7 @@
 /* lg */
 @media (min-width: 1024px) {
   .work__container {
-    max-width: 80%;
+    max-width: 80ch;
   }
 
   .work__title {
@@ -292,12 +281,11 @@
 /* xl */
 @media (min-width: 1280px) {
   .work__container {
-    max-width: 68%;
+    max-width: 60%;
   }
 
   .work__title {
     font-size: var(--size-5xl);
-    margin: 2rem 0;
   }
 
   .work__project-subtitle {
@@ -316,6 +304,6 @@
 /* 2xl */
 @media (min-width: 1536px) {
   .work__container {
-    width: 65%;
+    width: 55%;
   }
 }
