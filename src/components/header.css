@@ -31,7 +31,9 @@ header {
   color: var(--color-nav-item);
   text-decoration: none;
   cursor: pointer;
-  transition: visibility 0.3s ease, opacity 0.3s ease;
+  transition:
+    visibility 0.3s ease,
+    opacity 0.3s ease;
   opacity: 1;
   visibility: visible;
 }
@@ -55,7 +57,9 @@ header {
   width: 14px;
   height: 2px;
   border-radius: 2px;
-  transition: opacity 0.1s, transform 0.3s ease;
+  transition:
+    opacity 0.1s,
+    transform 0.3s ease;
   background-color: var(--color-nav-item);
 }
 
@@ -121,7 +125,7 @@ header {
     width: 100%;
     background: none;
     backdrop-filter: blur(17px);
-    border-bottom: 1px solid #ffffff1a;
+    border-bottom: 1px solid var(--color-border-sec);
     z-index: 9999;
   }
 

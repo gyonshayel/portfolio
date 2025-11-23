@@ -1,5 +1,5 @@
 footer {
-  background-color: var(--color-top);
+  background-color: var(--color-nav-bg);
 }
 
 .footer__content {
@@ -31,13 +31,9 @@ footer {
   font-size: var(--size-base);
   font-family: var(--font-family-mono);
   font-weight: 400;
-  color: var(--color-text);
+  color: var(--color-nav-item);
   letter-spacing: 0.0625em;
   transition: color 0.3s;
-}
-
-.footer__nav-link:hover {
-  color: var(--color-heading);
 }
 
 .footer__connect {
@@ -63,7 +59,7 @@ footer {
   text-align: center;
   font-size: var(--size-xs);
   font-family: var(--font-family-mono);
-  color: var(--color-text);
+  color: var(--color-nav-item);
   margin-bottom: 0.5em;
 }
 

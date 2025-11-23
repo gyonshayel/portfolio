@@ -15,11 +15,11 @@ export function Hero() {
       blendingValue="multiply"
       interactive={false}
       size="150%"
-      containerClassName="h-[calc(100vh-var(--header-height))] sm:[--size:100%]"
+      containerClassName="min-h-[calc(100vh-var(--header-height))] sm:[--size:120%] bg-[url('../../../../public/noise.png')]"
     >
       <section
         id="hero"
-        className="hero container absolute z-50 left-[50%] transform translate-x-[-50%]"
+        className="hero absolute left-[50%] z-50 container translate-x-[-50%] transform"
       >
         {/* <div className="relative"></div> */}
         <div className="hero__intro">
@@ -44,7 +44,7 @@ export function Hero() {
             Contact Me
           </a>
           <a
-            className="btn resume-btn"
+            className="btn-sec resume-btn"
             href="https://drive.google.com/file/d/1n9nzqH89n9iXBExZ3yMDQ2vT_0UjrRZv/view?usp=sharing"
             target="_blank"
           >

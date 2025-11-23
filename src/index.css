@@ -84,13 +84,15 @@
   --color-nav-item: rgba(255, 255, 255, 0.8);
   --color-border: hsl(0, 0%, 70%);
   --color-border-highlight: hsl(0, 0%, 40%);
+  --color-border-sec: #ffffff1a;
   --gradient: linear-gradient(0deg, var(--color-middle) 95%, var(--color-top));
   --gradient-hover: linear-gradient(
     0deg,
     var(--color-middle),
     var(--color-top)
   );
-  --shadow: 0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+  --shadow:
+    0px 2px 2px hsla(0, 0%, 0%, 0.07), 0px 4px 4px hsla(0, 0%, 0%, 0.15);
 }
 
 .dark {
@@ -241,14 +243,30 @@
     border-radius: 50px;
     background-color: var(--color-primary);
     color: var(--color-black);
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease,
+      box-shadow 0.3s ease;
   }
 
   .btn:hover {
     transform: translateY(-2px);
     filter: brightness(1.1);
-    box-shadow: 0px 2px 2px oklch(0 0 0 / 0.2), 0px 4px 4px oklch(0 0 0 / 0.1);
-    color: hsl(0, 0%, 5%);
+    box-shadow:
+      0px 4px 4px oklch(0.868 0.187 121 / 0.2),
+      0px 6px 6px oklch(0.868 0.187 121 / 0.1);
+  }
+
+  .btn-sec {
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-family-mono);
+    padding: 0.25em 0.5em;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--color-heading);
+    font-weight: 500;
   }
 
   .scrollbar-hide::-webkit-scrollbar {
@@ -259,10 +277,22 @@
     scrollbar-width: none; /* Firefox */
   }
 
+  .container-shadow {
+    box-shadow:
+      rgba(0, 0, 0, 0.04) 0px 4px 10px,
+      rgba(0, 0, 0, 0.03) 0px 1px 4px,
+      rgba(0, 0, 0, 0.02) 0px 1px 2px;
+  }
+
   @media (prefers-color-scheme: dark) {
-    .btn:hover {
-      box-shadow: 0px 4px 4px oklch(0.868 0.187 121 / 0.2),
-        0px 6px 6px oklch(0.868 0.187 121 / 0.1);
+    .btn-sec {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .container-shadow {
+      box-shadow:
+        0px 4px 4px oklch(0% 0 0 / 0.2),
+        0px 6px 6px oklch(0% 0 0 / 0.1);
     }
   }
 

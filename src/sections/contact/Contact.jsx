@@ -4,7 +4,7 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="p-6 backdrop-blur-md rounded-3xl contact container section border border-(--color-border)"
+      className="contact section border border-(--color-border-sec) bg-(--color-top) p-6 backdrop-blur-md"
     >
       <h2 className="contact__title">Get In Contact</h2>
       <p className="contact__description">

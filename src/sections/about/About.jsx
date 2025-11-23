@@ -4,9 +4,9 @@ export function About() {
   return (
     <section
       id="about"
-      className="flex flex-col gap-4 lg:gap-6 p-6 bg-(--color-bottom)/60 backdrop-blur-md rounded-3xl container section border border-red-500"
+      className="section container flex flex-col gap-4 rounded-3xl border border-(--color-border-sec) bg-(--color-top) p-6 backdrop-blur-md lg:gap-6"
     >
-      <div className="flex flex-col max-w-[80ch] ml-0 lg:m-auto lg:text-center">
+      <div className="ml-0 flex max-w-[80ch] flex-col lg:m-auto lg:text-center">
         <h2 className="about__title">About Me</h2>
         <p className="about__description">
           Hi, I am Gyon Shayel Joshua, a software engineering student currently
@@ -25,9 +25,9 @@ export function About() {
           development.
         </p>
       </div>
-      <div className="w-full h-full max-w-[80ch] xl:max-w-full ml-0 lg:m-auto bg-[radial-gradient(circle_at_center,var(--color-top),var(--color-middle),var(--color-bottom))] rounded-3xl">
+      <div className="ml-0 h-full w-full max-w-[80ch] rounded-3xl bg-(--color-bottom) lg:m-auto xl:max-w-full">
         <ul className="about__technologies-content">
-          <h3 className="about__technologies-title ">Technologies</h3>
+          <h3 className="about__technologies-title">Technologies</h3>
           <li className="text-[#E34F26] hover:bg-[#E34F26] hover:text-(--color-nav-bg)">
             <figure>
               <svg
