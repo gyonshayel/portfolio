@@ -15,7 +15,7 @@ export function Hero() {
       blendingValue="multiply"
       interactive={false}
       size="150%"
-      containerClassName="min-h-[calc(100vh-var(--header-height))] sm:[--size:120%] bg-[url('../../../../public/noise.png')]"
+      containerClassName="min-h-[calc(100vh-var(--header-height))] sm:[--size:120%] bg-[url('/noise.png')]"
     >
       <section
         id="hero"
