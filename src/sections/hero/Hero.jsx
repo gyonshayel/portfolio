@@ -26,26 +26,27 @@ export function Hero() {
           <img
             className="hero__intro-img"
             src="/hero.JPG"
-            alt="Profile picture."
+            alt="I use this profile picture everywhere :)"
           />
-          <h2 className="hero__intro-subtitle">
+          <h1 className="hero__intro-subtitle">
             Hello, I am Gyon Shayel Joshua
-          </h2>
+          </h1>
         </div>
-        <h1 className="hero__title">
+        <h2 className="hero__title">
           <span>Web </span> <span>Developer</span>
-        </h1>
+        </h2>
         <p className="hero__description">
           A passionate Front-End Web Developer with a knack for creating
           visually appealing and user-friendly websites.
         </p>
         <div className="hero__btns">
-          <a className="btn contact-btn px-0" href="#contact">
+          <a role="button" className="btn contact-btn px-0" href="#contact">
             Contact Me
           </a>
           <a
+            role="button"
             className="btn-sec resume-btn"
-            href="https://drive.google.com/file/d/1n9nzqH89n9iXBExZ3yMDQ2vT_0UjrRZv/view?usp=sharing"
+            href="https://drive.google.com/file/d/1E-wHQjOCXFkrAp8bmBgJjn6CvLBmgzxf/view?usp=sharing"
             target="_blank"
           >
             Resume

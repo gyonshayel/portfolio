@@ -192,6 +192,10 @@
   a {
     text-decoration: underline;
   }
+
+  /* .radix-dialog-overlay.lightbox-block {
+    pointer-events: none !important;
+  } */
 }
 
 @layer components {

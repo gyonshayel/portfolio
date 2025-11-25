@@ -28,11 +28,11 @@ export const BackgroundGradientAnimation = ({
   useEffect(() => {
     document.body.style.setProperty(
       "--gradient-background-start",
-      gradientBackgroundStart
+      gradientBackgroundStart,
     );
     document.body.style.setProperty(
       "--gradient-background-end",
-      gradientBackgroundEnd
+      gradientBackgroundEnd,
     );
     document.body.style.setProperty("--first-color", firstColor);
     document.body.style.setProperty("--second-color", secondColor);
@@ -52,7 +52,7 @@ export const BackgroundGradientAnimation = ({
       setCurY((prev) => prev + (tgY - prev) / 20);
 
       interactiveRef.current.style.transform = `translate(${Math.round(
-        curX
+        curX,
       )}px, ${Math.round(curY)}px)`;
     }
 
@@ -76,8 +76,8 @@ export const BackgroundGradientAnimation = ({
   return (
     <div
       className={cn(
-        "h-screen w-screen relative overflow-hidden top-0 left-0 bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
-        containerClassName
+        "relative top-0 left-0 h-screen w-screen overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+        containerClassName,
       )}
     >
       <svg className="hidden">
@@ -104,49 +104,49 @@ export const BackgroundGradientAnimation = ({
       <div
         className={cn(
           "gradients-container h-full w-full blur-lg",
-          isSafari ? "blur-2xl" : "[filter:url(#blurMe)_blur(40px)]",
-          "max-[475px]:left-[-50%] max-[475px]:relative"
+          isSafari ? "blur-2xl" : "filter-[url(#blurMe)_blur(40px)]",
+          "max-[475px]:relative max-[475px]:left-[-50%]",
         )}
       >
         {/* Gradient blobs */}
         <div
           className={cn(
-            "absolute [background:radial-gradient(circle_at_center,_var(--first-color)_0,_var(--first-color)_50%)_no-repeat]",
-            "[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)]",
+            "absolute [background:radial-gradient(circle_at_center,var(--first-color)_0,var(--first-color)_50%)_no-repeat]",
+            "h-(--size) w-(--size) [mix-blend-mode:var(--blending-value)]",
             "top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]",
-            "[transform-origin:center_center] animate-first opacity-100"
+            "animate-first origin-[center_center] opacity-100",
           )}
         />
         <div
           className={cn(
-            "absolute [background:radial-gradient(circle_at_center,_rgba(var(--second-color),_0.8)_0,_rgba(var(--second-color),_0)_50%)_no-repeat]",
-            "[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)]",
+            "absolute [background:radial-gradient(circle_at_center,rgba(var(--second-color),0.8)_0,rgba(var(--second-color),0)_50%)_no-repeat]",
+            "h-(--size) w-(--size) [mix-blend-mode:var(--blending-value)]",
             "top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]",
-            "[transform-origin:calc(50%-400px)] animate-second opacity-100"
+            "animate-second origin-[calc(50%-400px)] opacity-100",
           )}
         />
         <div
           className={cn(
-            "absolute [background:radial-gradient(circle_at_center,_rgba(var(--third-color),_0.8)_0,_rgba(var(--third-color),_0)_50%)_no-repeat]",
-            "[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)]",
+            "absolute [background:radial-gradient(circle_at_center,rgba(var(--third-color),0.8)_0,rgba(var(--third-color),0)_50%)_no-repeat]",
+            "h-(--size) w-(--size) [mix-blend-mode:var(--blending-value)]",
             "top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]",
-            "[transform-origin:calc(50%+400px)] animate-third opacity-100"
+            "animate-third origin-[calc(50%+400px)] opacity-100",
           )}
         />
         <div
           className={cn(
-            "absolute [background:radial-gradient(circle_at_center,_rgba(var(--fourth-color),_0.8)_0,_rgba(var(--fourth-color),_0)_50%)_no-repeat]",
-            "[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)]",
+            "absolute [background:radial-gradient(circle_at_center,rgba(var(--fourth-color),0.8)_0,rgba(var(--fourth-color),0)_50%)_no-repeat]",
+            "h-(--size) w-(--size) [mix-blend-mode:var(--blending-value)]",
             "top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]",
-            "[transform-origin:calc(50%-200px)] animate-fourth opacity-70"
+            "animate-fourth origin-[calc(50%-200px)] opacity-70",
           )}
         />
         <div
           className={cn(
-            "absolute [background:radial-gradient(circle_at_center,_rgba(var(--fifth-color),_0.8)_0,_rgba(var(--fifth-color),_0)_50%)_no-repeat]",
-            "[mix-blend-mode:var(--blending-value)] w-[var(--size)] h-[var(--size)]",
+            "absolute [background:radial-gradient(circle_at_center,rgba(var(--fifth-color),0.8)_0,rgba(var(--fifth-color),0)_50%)_no-repeat]",
+            "h-(--size) w-(--size) [mix-blend-mode:var(--blending-value)]",
             "top-[calc(50%-var(--size)/2)] left-[calc(50%-var(--size)/2)]",
-            "[transform-origin:calc(50%-800px)_calc(50%+800px)] animate-fifth opacity-100"
+            "animate-fifth origin-[calc(50%-800px)_calc(50%+800px)] opacity-100",
           )}
         />
 
@@ -155,9 +155,9 @@ export const BackgroundGradientAnimation = ({
             ref={interactiveRef}
             onMouseMove={handleMouseMove}
             className={cn(
-              "absolute [background:radial-gradient(circle_at_center,_rgba(var(--pointer-color),_0.8)_0,_rgba(var(--pointer-color),_0)_50%)_no-repeat]",
-              "[mix-blend-mode:var(--blending-value)] w-full h-full -top-1/2 -left-1/2",
-              "opacity-70"
+              "absolute [background:radial-gradient(circle_at_center,rgba(var(--pointer-color),0.8)_0,rgba(var(--pointer-color),0)_50%)_no-repeat]",
+              "-top-1/2 -left-1/2 h-full w-full [mix-blend-mode:var(--blending-value)]",
+              "opacity-70",
             )}
           />
         )}

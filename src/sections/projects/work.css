@@ -178,50 +178,20 @@
   .work__project-1 {
     flex-direction: row;
     text-align: right;
-    /* background-image: linear-gradient(
-      to right,
-      var(--color-top) 50%,
-      var(--color-middle),
-      var(--color-bottom)
-    ); */
   }
   .work__project-2 {
     flex-direction: row-reverse;
-    /* background-image: linear-gradient(
-      to left,
-      var(--color-top) 50%,
-      var(--color-middle),
-      var(--color-bottom)
-    ); */
   }
   .work__project-3 {
     flex-direction: row;
     text-align: right;
-    /* background-image: linear-gradient(
-      to right,
-      var(--color-top) 50%,
-      var(--color-middle),
-      var(--color-bottom)
-    ); */
   }
   .work__project-4 {
     flex-direction: row-reverse;
-    /* background-image: linear-gradient(
-      to left,
-      var(--color-top) 50%,
-      var(--color-middle),
-      var(--color-bottom)
-    ); */
   }
   .work__project-5 {
     flex-direction: row;
     text-align: right;
-    /* background-image: linear-gradient(
-      to right,
-      var(--color-top) 50%,
-      var(--color-middle),
-      var(--color-bottom)
-    ); */
   }
 
   .work__img-wrapper::after {

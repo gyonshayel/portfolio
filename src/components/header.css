@@ -44,18 +44,20 @@ header {
 }
 
 .header__bars {
-  height: calc(var(--header-height) - 1.1rem);
+  touch-action: manipulation;
+  height: calc(var(--header-height) - 0.6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 2px;
+  gap: 3px;
   position: relative;
   cursor: pointer;
   position: relative;
 }
 .header__bars span {
-  width: 14px;
-  height: 2px;
+  will-change: transform, opacity;
+  width: 21px;
+  height: 3px;
   border-radius: 2px;
   transition:
     opacity 0.1s,
@@ -66,7 +68,7 @@ header {
 /* Hamburger menu active */
 .header__bars.active span:nth-child(1) {
   transform-origin: center center;
-  transform: translateY(4px) rotate(-45deg);
+  transform: translateY(6px) rotate(-45deg);
 }
 
 .header__bars.active span:nth-child(2) {
@@ -75,11 +77,11 @@ header {
 
 .header__bars.active span:nth-child(3) {
   transform-origin: center center;
-  transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-6px) rotate(45deg);
 }
 
 /* xs */
-@media (min-width: 475px) {
+@media screen and (min-width: 475px) {
   .header-logo__link {
     font-size: 1.75rem;
   }
@@ -90,40 +92,21 @@ header {
 }
 
 /* sm */
-@media (min-width: 640px) {
+@media screen and (min-width: 640px) {
   .header-logo__link {
     font-size: 2rem;
-  }
-
-  .header__bars {
-    height: calc(var(--header-height) - 0.6rem);
-    gap: 3px;
-  }
-
-  .header__bars span {
-    width: 21px;
-    height: 3px;
-  }
-
-  .header__bars.active span:nth-child(1) {
-    transform-origin: center center;
-    transform: translateY(6px) rotate(-45deg);
-  }
-
-  .header__bars.active span:nth-child(3) {
-    transform-origin: center center;
-    transform: translateY(-6px) rotate(45deg);
   }
 }
 
 /* md */
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
   header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: none;
+    -webkit-backdrop-filter: blur(17px);
     backdrop-filter: blur(17px);
     border-bottom: 1px solid var(--color-border-sec);
     z-index: 9999;
@@ -164,7 +147,7 @@ header {
 }
 
 /* lg */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .header-logo__link {
     font-size: 1.75rem;
   }
@@ -179,3 +162,10 @@ header {
 
 /* 2xl */
 /* @media (min-width: 1536px) {} */
+
+@media (prefers-reduced-motion: reduce) {
+  .header__bars span,
+  .header-logo__link {
+    transition: none !important;
+  }
+}

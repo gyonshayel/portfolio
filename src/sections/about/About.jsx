@@ -27,10 +27,11 @@ export function About() {
       </div>
       <div className="ml-0 h-full w-full max-w-[80ch] rounded-3xl bg-(--color-bottom) lg:m-auto xl:max-w-full">
         <ul className="about__technologies-content">
-          <h3 className="about__technologies-title">Technologies</h3>
+          <li className="about__technologies-title">Technologies</li>
           <li className="text-[#E34F26] hover:bg-[#E34F26] hover:text-(--color-nav-bg)">
             <figure>
               <svg
+                aria-hidden="true"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +47,7 @@ export function About() {
           <li className="text-[#663399] hover:bg-[#663399] hover:text-(--color-nav-bg)">
             <figure>
               <svg
+                aria-hidden="true"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,6 +63,7 @@ export function About() {
           <li className="text-[#F7DF1E] hover:bg-[#F7DF1E] hover:text-(--color-nav-bg)">
             <figure>
               <svg
+                aria-hidden="true"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -76,6 +79,7 @@ export function About() {
           <li className="text-[#61DAFB] hover:bg-[#61DAFB] hover:text-(--color-nav-bg)">
             <figure>
               <svg
+                aria-hidden="true"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -91,6 +95,7 @@ export function About() {
           <li className="text-[#06B6D4] hover:bg-[#06B6D4] hover:text-(--color-nav-bg)">
             <figure>
               <svg
+                aria-hidden="true"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"
@@ -106,6 +111,7 @@ export function About() {
           <li className="text-[#F05032] hover:bg-[#F05032] hover:text-(--color-nav-bg)">
             <figure>
               <svg
+                aria-hidden="true"
                 role="img"
                 viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg"

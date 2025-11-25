@@ -3,6 +3,9 @@ import "./mobile-nav.css";
 export function MobileNav({ mounted, isOpen, toggleMobileNav }) {
   return (
     <div
+      role="navigation"
+      aria-hidden={!isOpen}
+      id="mobile-nav"
       className={`mobile-nav ${
         !mounted ? "" : isOpen ? "active" : "not-active"
       }`}

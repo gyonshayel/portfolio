@@ -25,7 +25,6 @@ export function Header() {
     }
 
     window.addEventListener("resize", handleResize);
-    handleResize();
 
     return () => {
       document.body.classList.remove("no-scroll");
@@ -37,7 +36,6 @@ export function Header() {
     <>
       <header>
         <nav className="header__content">
-          {/* md:container */}
           <div className="header-logo">
             <a
               className={`header-logo__link ${isOpen ? "logo-hidden" : ""}`}
@@ -65,12 +63,14 @@ export function Header() {
           </ul>
           <button
             onClick={toggleMobileNav}
-            aria-label="mobile navigation button"
+            aria-label="Open/Close mobile menu"
+            aria-expanded={isOpen}
+            aria-controls="mobile-nav"
             className={`header__bars ${isOpen ? "active" : ""}`}
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </button>
         </nav>
       </header>

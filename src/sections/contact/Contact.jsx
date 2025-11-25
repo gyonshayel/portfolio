@@ -13,8 +13,10 @@ export function Contact() {
         want to say hello, feel free to reach out!
       </p>
       <a
+        role="button"
         className="contact__btn btn"
         href="mailto:gyon.perera2002@gmail.com"
+        rel="noopener noreferrer"
         target="_blank"
       >
         Reach Out

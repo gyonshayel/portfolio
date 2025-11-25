@@ -1,14 +1,15 @@
-import { useState } from "react";
 import { ThemeSwitcher } from "./ui/shadcn-io/theme-switcher";
 import "./footer.css";
 
 export function Footer() {
-  const [theme, setTheme] = useState("system");
-
   return (
     <footer>
       <div className="footer__content container">
-        <ul className="footer__nav">
+        <ul
+          className="footer__nav"
+          aria-label="Footer navigation"
+          aria-hidden="true"
+        >
           <li>
             <a href="#hero" className="footer__nav-link">
               Home
@@ -31,10 +32,10 @@ export function Footer() {
           </li>
         </ul>
         <div className="footer__connect">
-          <h3 className="footer__connect-title">Connect</h3>
           <a
-            href="https://www.linkedin.com/in/gyon-shayel-234721242/"
+            href="https://www.linkedin.com/in/gyonshayel/"
             target="_blank"
+            rel="noopener noreferrer"
             className="footer__connect-link"
           >
             <svg
@@ -46,6 +47,7 @@ export function Footer() {
               viewBox="0 0 382 382"
               xmlSpace="preserve"
             >
+              <title>LinkedIn</title>
               <path
                 style={{
                   fill: "var(--color-nav-item)",
@@ -57,6 +59,7 @@ export function Footer() {
           <a
             href="https://github.com/gyonshayel"
             target="_blank"
+            rel="noopener noreferrer"
             className="footer__connect-link"
           >
             <svg
@@ -70,8 +73,9 @@ export function Footer() {
             </svg>
           </a>
           <a
-            href="https://x.com/shayeljoshua"
+            href="https://x.com/gyonshayel_"
             target="_blank"
+            rel="noopener noreferrer"
             className="footer__connect-link"
           >
             <svg
@@ -84,13 +88,9 @@ export function Footer() {
               <path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
             </svg>
           </a>
-          <ThemeSwitcher
-            value={theme}
-            onChange={setTheme}
-            className="scale-100"
-          />
+          <ThemeSwitcher className="scale-100" />
         </div>
-        <p className="footer__note">&copy; Shayel Joshua 2025</p>
+        <p className="footer__note">&copy; Shayel Joshua 2025.</p>
       </div>
     </footer>
   );
