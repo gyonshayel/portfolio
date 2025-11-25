@@ -1,6 +1,7 @@
 export const projects = [
   {
     // Project 1
+    id: 1,
     name: "E-commerce Project",
     description: `A fully functional responsive E-commerce web application based on Amazon, built with React and styled using Tailwind CSS and CSS. Features a homepage with product listings from <a href="https://dummyjson.com/" target="_blank">DummyJSON API</a>, a checkout page with access to the cart, an orders page and a tracking page that simulates order status updates.`,
     features: [
@@ -32,6 +33,7 @@ export const projects = [
 
   {
     // Project 2
+    id: 2,
     name: "Portfolio",
     description:
       "A modern fully responsive personal portfolio website built with React and styled using Tailwind CSS and CSS to showcase my skills and projects. Includes sections for projects, skills and contact, with smooth navigation and a minimal, professional design.",
@@ -53,6 +55,7 @@ export const projects = [
 
   {
     // Project 3
+    id: 3,
     name: "To-Do App",
     description:
       "A fully featured To-Do app built with React and styled using Tailwind CSS. Allows users to manage tasks efficiently across multiple categories. Designed with a focus on usability, responsiveness and modern react best practices.",
@@ -82,6 +85,7 @@ export const projects = [
 
   {
     // Project 4
+    id: 4,
     name: "Movie App",
     description: `A fully responsive, modern React web app that allows users to browse, search and explore movies. Provides detailed movie information and let users favorite movies or save them to watch later. This app integrates real world data through <a href="https://www.themoviedb.org/" target="_blank">TMDB API</a>.`,
     features: [
@@ -111,6 +115,7 @@ export const projects = [
 
   {
     // Project 5
+    id: 5,
     name: "Weather App",
     description: `A responsive weather application that provides real-time weather data and forecasts using <a href="https://www.weatherapi.com/" target="_blank">WeatherAPI</a>. Automatically detects the user's location (with given permission) and displays local weather data. Users can search for locations and toggle between different temperature units.`,
     features: [

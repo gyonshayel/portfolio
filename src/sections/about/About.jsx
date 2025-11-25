@@ -4,7 +4,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="section container flex flex-col gap-4 rounded-3xl border border-(--color-border-sec) bg-(--color-top) p-6 backdrop-blur-md lg:gap-6"
+      className="section container flex flex-col gap-4 border border-(--color-border-sec) bg-(--color-top) p-6 backdrop-blur-md min-[475px]:rounded-3xl lg:gap-6"
     >
       <div className="ml-0 flex max-w-[80ch] flex-col lg:m-auto lg:text-center">
         <h2 className="about__title">About Me</h2>
