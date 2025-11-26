@@ -6,7 +6,7 @@
   text-align: center;
 
   background-color: var(--color-primary);
-  filter: brightness(0.9);
+  filter: brightness(1);
   background-image:
     radial-gradient(var(--color-black) 0.25px, transparent 1px),
     radial-gradient(var(--color-black) 0.25px, transparent 1px);

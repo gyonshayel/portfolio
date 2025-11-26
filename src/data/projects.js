@@ -49,8 +49,8 @@ export const projects = [
       "/projects/portfolio/image-4.png",
     ],
     technologies: ["React", "Tailwind CSS", "CSS"],
-    github: "https://github.com/gyonshayel/Portfolio-website",
-    website: "https://portfolio-website-ten-blond-63.vercel.app/",
+    github: "https://github.com/gyonshayel/portfolio",
+    website: "https://portfolio-v3-kappa-six.vercel.app/",
   },
 
   {

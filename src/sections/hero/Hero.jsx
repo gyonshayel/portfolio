@@ -15,13 +15,12 @@ export function Hero() {
       blendingValue="multiply"
       interactive={false}
       size="150%"
-      containerClassName="min-h-[calc(100vh-var(--header-height))] sm:[--size:120%] bg-[url('/noise.png')]"
+      containerClassName="min-h-[calc(100vh-var(--header-height))] sm:[--size:240%] bg-[url('/noise.png')]"
     >
       <section
         id="hero"
         className="hero absolute left-[50%] z-50 container translate-x-[-50%] transform"
       >
-        {/* <div className="relative"></div> */}
         <div className="hero__intro">
           <img
             className="hero__intro-img"

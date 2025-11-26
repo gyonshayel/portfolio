@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-scroll-area": "^1.2.10",
     "@radix-ui/react-slot": "^1.2.4",
@@ -19,6 +20,7 @@
     "clsx": "^2.1.1",
     "dragscroll": "^0.0.8",
     "embla-carousel-react": "^8.6.0",
+    "gsap": "^3.13.0",
     "lucide-react": "^0.553.0",
     "motion": "^12.23.24",
     "react": "^19.1.1",

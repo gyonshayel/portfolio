@@ -39,7 +39,7 @@ export function Header() {
           <div className="header-logo">
             <a
               className={`header-logo__link ${isOpen ? "logo-hidden" : ""}`}
-              href="https://portfolio-website-ten-blond-63.vercel.app/"
+              href="/"
             >
               gyonshayel
             </a>

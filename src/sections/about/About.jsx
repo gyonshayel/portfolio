@@ -9,19 +9,20 @@ export function About() {
       <div className="ml-0 flex max-w-[80ch] flex-col lg:m-auto lg:text-center">
         <h2 className="about__title">About Me</h2>
         <p className="about__description">
-          Hi, I am Gyon Shayel Joshua, a software engineering student currently
-          completing my Higher National Diploma in Software Engineering. While
-          my academic studies mainly focus on building a strong foundation in
-          programming, databases, and software development principles, I do self
-          studies on web development to continue grow my web developing skills.
+          Hi, I am Gyon Shayel Joshua, an undergraduate currently completing my
+          Higher National Diploma in Software Engineering. While my academic
+          studies mainly focus on building a solid foundation in programming,
+          databases and software development principles, I actively pursue
+          self-learning in front-end web development to continue grow my
+          web-developing skills.
         </p>
         <p className="about__description">
           I enjoy creating clean, user-friendly web applications and
           experimenting with modern technologies. My portfolio reflects both my
           academic projects and personal learning, showcasing my passion for
-          design, coding, and problem-solving. Outside of coding, I am
-          constantly learning and exploring new ideas to improve my skills and
-          stay up to date with the latest trends in web development and software
+          design, coding and problem-solving. Outside of coding, I am constantly
+          learning and exploring new ideas to improve my skills and stay up to
+          date with the latest trends in web development and software
           development.
         </p>
       </div>
