@@ -3,6 +3,7 @@ import "./about.css";
 export function About() {
   return (
     <section
+      data-lag="0.5"
       id="about"
       className="section container flex flex-col gap-4 border border-(--color-border-sec) bg-(--color-top) p-6 backdrop-blur-md min-[475px]:rounded-3xl lg:gap-6"
     >

@@ -25,6 +25,7 @@ export function Projects() {
 
   return (
     <section
+      data-lag="0.5"
       id="work"
       className="section border border-(--color-border-sec) bg-(--color-top) p-6 backdrop-blur-md md:container md:rounded-3xl"
     >
@@ -33,6 +34,7 @@ export function Projects() {
         {projects.map((project, index) => {
           return (
             <article
+              // data-lag="0.4"
               className={`work__project work__project-${index + 1} container-shadow`}
               key={project.id}
             >

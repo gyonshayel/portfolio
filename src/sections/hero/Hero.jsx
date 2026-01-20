@@ -22,11 +22,17 @@ export function Hero() {
         className="hero absolute left-[50%] z-50 container translate-x-[-50%] transform"
       >
         <div className="hero__intro">
-          <img
-            className="hero__intro-img"
-            src="/hero.JPG"
-            alt="I use this profile picture everywhere :)"
-          />
+          <a
+            href="https://github.com/gyonshayel"
+            target="_blank"
+            title="https://github.com/gyonshayel"
+          >
+            <img
+              className="hero__intro-img"
+              src="/hero.JPG"
+              alt="Github profile picture"
+            />
+          </a>
           <h1 className="hero__intro-subtitle">
             Hello, I am Gyon Shayel Joshua
           </h1>

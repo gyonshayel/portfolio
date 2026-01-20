@@ -48,7 +48,7 @@ export const projects = [
       "/projects/portfolio/image-3.png",
       "/projects/portfolio/image-4.png",
     ],
-    technologies: ["React", "Tailwind CSS", "CSS"],
+    technologies: ["React", "Tailwind CSS", "CSS", "GSAP"],
     github: "https://github.com/gyonshayel/portfolio",
     website: "https://portfolio-v3-kappa-six.vercel.app/",
   },
