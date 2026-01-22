@@ -30,7 +30,7 @@ export function Hero() {
             <img
               className="hero__intro-img"
               src="/hero.JPG"
-              alt="Github profile picture"
+              alt="Click to view my Github profile."
             />
           </a>
           <h1 className="hero__intro-subtitle">
